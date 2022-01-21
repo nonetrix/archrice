@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -10,12 +10,25 @@ bspc config window_gap          12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+# Fix alacritty slow resizing
+bspc config pointer_motion_interval 60
+# Fix Android Studio
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
 polybar --config=~/.config/polybar/config mybar &
 picom &
-setbg
+dunst &
+lxsession &
+greenclip daemon &
+unclutter --timeout 5 &
+~/.local/bin/setbg
+xsetroot -cursor_name left_ptr
+pgrep bspswallow || bspswallow &
+mpv ~/.config/startup-sound/startup.wav &
