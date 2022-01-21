@@ -1,20 +1,29 @@
 [bar/mybar]
-modules-right = date
-modules-left = bspwm
-background = #22000000
+modules-right = pulseaudio date cpu memory
+modules-left = bspwm title
+module-margin-left = 2
+module-margin-right = 2
+offset-y = -10 
+background = #55000000
 radius-bottom = 15.0
 margin-left = 15.0
+border-top-size = 10
 padding-left  = 5
 padding-right = 5
 border-size = 2
-border-color = #55000000
+border-color = #75757f
 border-radius = 15.0
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
+separator = |
+font-0 = "JetBrainsMono:size=12;2"
+line-size = 1
 
 [module/date]
 type = internal/date
 date = %Y-%m-%d%
+time = %r
+label = TIME %time% | DATE %date%
 
 [module/bspwm]
 type = internal/bspwm
@@ -23,3 +32,46 @@ inline-mode = false
 enable-click = true
 enable-scroll = true
 reverse-scroll = true
+
+label-focused-underline= #ffffff
+
+[module/cpu]
+type = internal/cpu
+
+label = CPU %percentage%%
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
+
+[module/memory]
+type = internal/memory
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+label = RAM %gb_used%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+label-volume = VOL %percentage%%
+
+[module/title]
+type = internal/xwindow
+
+
+label-maxlen = 75
