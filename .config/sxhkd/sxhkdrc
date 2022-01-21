@@ -7,17 +7,68 @@ super + w
 super + d
         rofi -show run
 
+Print
+	scrot ~/Pictures/"$(date)".png
+
+super + Print
+	scrot -s ~/Pictures/"$(date)".png
+
+super + m
+	alacritty -e btop
+
 super + q
-        bspc node -{c,k}
+        bspc node -c
+
+super + f
+	alacritty -e lfrun
+
+super + equal
+    alacritty -e bc
+
+super + e 
+    rofi -show emoji -modi emoji
+
+super + p
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+super + u
+    sh ~/.config/rofi/rofi-usb-mount.sh
+
+super + x
+    ~/.config/rofi/rofi-power
+
+super + i 
+    bwmenu
+
+super + n
+    alacritty -e nvim ~/Documents/notes
+
+XF86AudioMute
+	pactl set-sink-volume @DEFAULT_SINK@ 0% && notify-send "Volume" -t 600 -i notification-audio-volume-medium -h int:value:$(pamixer --get-volume)
+
+XF86Audio{Lower,Raise}Volume
+	pactl set-sink-volume @DEFAULT_SINK@ {-,+}1%  && notify-send "Volume" -t 600 -i notification-audio-volume-medium -h int:value:$(pamixer --get-volume)
+
+XF86AudioNext
+    playerctl next
+
+XF86AudioPrev
+    playerctl previous 
+
+XF86AudioPause
+    playerctl play-pause && notify-send "Media" "$(playerctl status)"
+
+XF86AudioPlay
+    playerctl play-pause && notify-send "Media" "$(playerctl status)"
+
+alt + Tab
+    rofi -show window
 
 super + {h,j,k,l}
   bspc node -z {left -20 0 || bspc node -z right -20 0, \
                 bottom 0 20 || bspc node -z top 0 20,\
                 top 0 -20 || bspc node -z bottom 0 -20,\
                 right 20 0 || bspc node -z left 20 0}
-
-super + alt + {Left,Down,Up,Right}
-    bspc node -v {-20 0,0 20,0 -20,20 0}
 
 super + t
     if [ -z "$(bspc query -N -n focused.floating)" ]; then \
@@ -26,5 +77,26 @@ super + t
         bspc node focused -t tiled; \
     fi
 
+super + c
+	toggleprogram picom
+
+super + r
+	bspc wm -r
+
+super + b
+	toggleprogram polybar
+
 super + {_,shift + }{1-9,0}
       bspc {desktop -f,node -d} '^{1-9,10}' --follow
+
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous node in the current desktop
+super + alt + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+super + {_, shift +} g
+    { bspc config -d focused window_gap $(( $(bspc config -d focused window_gap) + 10 )), \
+    [ $(bspc config -d focused window_gap) -ge 10 ] && \
+    bspc config -d focused window_gap $(( $(bspc config -d focused window_gap) - 10 )) }
