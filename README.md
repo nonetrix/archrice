@@ -11,9 +11,13 @@ These are the dotfiles deployed by [NARBS](https://github.com/nonetrix/NARBS/blo
 - Install script
 ```
 
-# WIP
+# WIP and TODO
 ```
-- Video wallpapers
+- Video wallpapers with MPV and xwinrap with GPU decoding enabled
+- Multi-monitor(hopefully)
 - Switching to Neovide as Neovim client
 - Jellybean theme
+- chaotic aur
+- Prompt user for browser
+- Prompt user to install NVIDIA drivers
 ```
