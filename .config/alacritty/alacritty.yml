@@ -1,4 +1,5 @@
-background_opacity: 0.5
+window:
+  opacity: 0.5
 
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
@@ -6,5 +7,38 @@ key_bindings:
 font:
   normal:
     family: JetBrains Mono
-  size: 12.0
+  size: 10.0
   fallback_size: 20.0
+
+colors:
+  # Default colors
+  primary:
+    background: '0x121212'
+    foreground: '0xdedede'
+
+  # Cursor colors
+  cursor:
+    text:   '0xffffff'
+    cursor: '0xffa460'
+
+  # Normal colors
+  normal:
+    black:   '0x929292'
+    red:     '0xe27373'
+    green:   '0x94b979'
+    yellow:  '0xffba7b'
+    blue:    '0x97bedc'
+    magenta: '0xe1c0fa'
+    cyan:    '0x00988e'
+    white:   '0xdedede'
+
+  # Bright colors
+  bright:
+    black:   '0xbdbdbd'
+    red:     '0xffa1a1'
+    green:   '0xbddeab'
+    yellow:  '0xffdca0'
+    blue:    '0xb1d8f6'
+    magenta: '0xfbdaff'
+    cyan:    '0x1ab2a8'
+    white:   '0xffffff'
