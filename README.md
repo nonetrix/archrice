@@ -9,15 +9,15 @@ These are the dotfiles deployed by [NARBS](https://github.com/nonetrix/NARBS/blo
 - Clipboard manager
 - Bitwarden menu
 - Install script
+- Window swallowing
+- Smooth scolling and ctrl-c/v support in Vim via neovide
+- Video wallpapers with MPV and xwinrap with GPU decoding enabled*
 ```
 
 # WIP and TODO
 ```
-- Video wallpapers with MPV and xwinrap with GPU decoding enabled
 - Multi-monitor(hopefully)
-- Switching to Neovide as Neovim client
-- Jellybean theme
 - chaotic aur
-- Prompt user for browser
+- Prompt user for browser since they are equally terrible
 - Prompt user to install NVIDIA drivers
 ```
