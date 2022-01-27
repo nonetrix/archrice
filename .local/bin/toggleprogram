@@ -1,0 +1,7 @@
+#!/bin/bash
+if pgrep $1 > /dev/null
+then
+	killall $1
+else
+	$1 &> /dev/null &
+fi
