@@ -44,6 +44,8 @@ cmd trash ${{
   done
 }}
 
+cmd upscale %realesrgan-ncnn-vulkan -n realesrgan-x4plus-anime -i "$f" -o "$f"-upscale.png
+
 map m
 map o
 map n
@@ -60,3 +62,4 @@ map md mkdir
 map R reload
 map dd trash
 map dr drag
+map aup upscale

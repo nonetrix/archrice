@@ -1,26 +1,26 @@
 super + Return
-        alacritty
+    alacritty
 
 super + w
-        brave
+    librewolf 
 
 super + d
-        rofi -show run
+    rofi -show run
 
 Print
-	scrot ~/Pictures/"$(date)".png
+    scrot ~/Pictures/screenshot/"$(date)".png
 
 super + Print
-	scrot -s ~/Pictures/"$(date)".png
+    scrot -s ~/Pictures/screenshot/"$(date)".png
 
 super + m
-	alacritty -e btop
+    alacritty -e btop
 
 super + q
-        bspc node -c
+    bspc node -c
 
 super + f
-	alacritty -e lfrun
+    alacritty -e lfrun
 
 super + equal
     alacritty -e bc
@@ -37,6 +37,9 @@ super + u
 super + x
     ~/.config/rofi/rofi-power
 
+super + shift + w
+    alacritty -e weather
+
 super + i 
     bwmenu
 
@@ -44,10 +47,10 @@ super + n
     alacritty -e nvim ~/Documents/notes
 
 XF86AudioMute
-	pactl set-sink-volume @DEFAULT_SINK@ 0% && notify-send "Volume" -t 600 -i notification-audio-volume-medium -h int:value:$(pamixer --get-volume)
+    pactl set-sink-volume @DEFAULT_SINK@ 0% && notify-send "Volume" -t 600 -i notification-audio-volume-medium -h int:value:$(pamixer --get-volume)
 
 XF86Audio{Lower,Raise}Volume
-	pactl set-sink-volume @DEFAULT_SINK@ {-,+}1%  && notify-send "Volume" -t 600 -i notification-audio-volume-medium -h int:value:$(pamixer --get-volume)
+    pactl set-sink-volume @DEFAULT_SINK@ {-,+}1%  && notify-send "Volume" -t 600 -i notification-audio-volume-medium -h int:value:$(pamixer --get-volume)
 
 XF86AudioNext
     playerctl next
@@ -65,10 +68,10 @@ alt + Tab
     rofi -show window
 
 super + {h,j,k,l}
-  bspc node -z {left -20 0 || bspc node -z right -20 0, \
-                bottom 0 20 || bspc node -z top 0 20,\
-                top 0 -20 || bspc node -z bottom 0 -20,\
-                right 20 0 || bspc node -z left 20 0}
+    bspc node -z {left -20 0 || bspc node -z right -20 0, \
+        bottom 0 20 || bspc node -z top 0 20,\
+        top 0 -20 || bspc node -z bottom 0 -20,\
+        right 20 0 || bspc node -z left 20 0}
 
 super + t
     if [ -z "$(bspc query -N -n focused.floating)" ]; then \
@@ -78,23 +81,23 @@ super + t
     fi
 
 super + c
-	toggleprogram picom
+    toggleprogram picom
 
 super + r
-	bspc wm -r
+    bspc wm -r
 
 super + b
-	toggleprogram polybar
+    toggleprogram polybar
 
 super + {_,shift + }{1-9,0}
-      bspc {desktop -f,node -d} '^{1-9,10}' --follow
+    bspc {desktop -f,node -d} '^{1-9,10}' --follow
 
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+    bspc node -{f,s} {west,south,north,east}
 
 # focus the next/previous node in the current desktop
 super + alt + {h,j,k,l}
-	bspc node -f {west,south,north,east}
+    bspc node -f {west,south,north,east}
 
 super + {_, shift +} g
     { bspc config -d focused window_gap $(( $(bspc config -d focused window_gap) + 10 )), \

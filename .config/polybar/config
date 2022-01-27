@@ -19,27 +19,6 @@ separator = |
 font-0 = "JetBrainsMono:size=12;2"
 line-size = 1
 
-[bar/mybar2]
-modules-right = pulseaudio date cpu memory
-modules-left = bspwm title
-module-margin-left = 2
-module-margin-right = 2
-offset-y = -10 
-background = #aa121212
-radius-bottom = 15.0
-margin-left = 15.0
-border-top-size = 10
-padding-left  = 5
-padding-right = 5
-border-size = 2
-border-color = #75757f
-border-radius = 15.0
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
-separator = |
-font-0 = "JetBrainsMono:size=12;2"
-line-size = 1
-
 [module/date]
 type = internal/date
 date = %Y-%m-%d%
