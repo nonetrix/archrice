@@ -99,6 +99,8 @@ bindkey "^[[1;5D" backward-word
 bindkey -s '^e' 'nvim $(fzf)\n'
 bindkey -s '^o' 'xdg-open $(fzf)\n'
 
+xdg-user-dirs-update &
+
 neofetch
 
 eval $(thefuck --alias)
