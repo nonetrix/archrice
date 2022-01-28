@@ -33,10 +33,6 @@ anime_upscale() {
     realesrgan-ncnn-vulkan -n realesrgan-x4plus-anime -i "$1" -o "$1"-upscale.png
 }
 
-neovim() {
-    neovide --nofork  --multigrid "$1"
-}
-
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
@@ -58,7 +54,6 @@ _comp_options+=(globdots)
 zstyle ':completion:*' menu select
 
 alias anime-upscale=anime_upscale
-alias nvim=neovim
 # Hey smokers druga1 here today we are doing some lsd
 alias ls=lsd
 alias htop="btop"
