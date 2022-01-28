@@ -26,6 +26,8 @@ polybar --config=~/.config/polybar/config mybar &
 picom &
 dunst &
 lxsession &
+eval $(gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
 greenclip daemon &
 unclutter --timeout 5 &
 ~/.local/bin/setbg
