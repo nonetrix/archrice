@@ -9,9 +9,8 @@ These are the dotfiles deployed by [NARBS](https://github.com/nonetrix/NARBS/blo
 - Clipboard manager
 - Bitwarden menu
 - Install script
-- Window swallowing
-- Smooth scolling and ctrl-c/v support in Vim via neovide
-- Video wallpapers with MPV and xwinrap with GPU decoding enabled*
+- Window swallowing(needs work)
+- Video wallpapers with MPV and xwinrap with GPU decoding enabled(needs work)
 ```
 
 # WIP and TODO
