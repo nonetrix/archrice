@@ -34,3 +34,5 @@ These are the dotfiles deployed by [NARBS](https://github.com/nonetrix/NARBS/blo
 - Figure out how to automate installing browser extensions
 - Add system tray toggle for annoying programs that insist on using it
 ```
+
+Please make suggestions for features to add just keep in mind I might or might not add them if they seem useful to me :P
