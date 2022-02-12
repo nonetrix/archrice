@@ -26,7 +26,7 @@ super + equal
     alacritty -e bc
 
 super + e 
-    rofi -show emoji -modi emoji
+    splatmoji copy
 
 super + p
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
