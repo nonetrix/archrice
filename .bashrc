@@ -1,3 +1,5 @@
-neofetch
 export PATH="~/.local/bin:$PATH"
-eval "$(starship init bash)"
+if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
+then
+	exec fish
+fi
