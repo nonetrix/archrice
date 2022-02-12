@@ -21,6 +21,9 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc config focus_follows_pointer true
+
+xrdb ~/.config/xresources/iterm-Jellybeans.Xresources
 
 polybar --config=~/.config/polybar/config mybar &
 picom &
@@ -30,7 +33,7 @@ eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 greenclip daemon &
 unclutter --timeout 5 &
-~/.local/bin/setbg
 xsetroot -cursor_name left_ptr
 pgrep bspswallow || bspswallow &
 mpv ~/.config/startup-sound/startup.wav &
+setbg
