@@ -1,0 +1,9 @@
+sudo sh -c "curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts > /etc/hosts"
+sudo sh -c "curl https://www.github.developerdan.com/hosts/lists/facebook-extended.txt >> /etc/hosts"
+# I give up fuck it
+sudo sh -c "curl https://www.github.developerdan.com/hosts/lists/dating-services-extended.txt >> /etc/hosts"
+sudo sh -c "curl https://raw.githubusercontent.com/llacb47/mischosts/master/social/tiktok-block >> /etc/hosts"
+sudo sh -c "curl https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt >> /etc/hosts"
+sudo sh -c "curl https://raw.githubusercontent.com/jmdugan/blocklists/master/corporations/pinterest/all >> /etc/hosts"
+sudo sh -c "curl https://raw.githubusercontent.com/jmdugan/blocklists/master/corporations/microsoft/linkedin >> /etc/hosts"
+sudo sh -c "curl https://raw.githubusercontent.com/nonetrix/AIBlock/main/hosts >> /etc/hosts"
