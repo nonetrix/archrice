@@ -1,0 +1,4 @@
+#examples-content .example.blocked, #examples-content .example.blocked .text {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
