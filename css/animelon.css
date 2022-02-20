@@ -1,0 +1,9 @@
+/* Hide English subtitles unless hovered */
+
+.english {
+	color: rgba(255, 255, 255, 0) !important;
+}
+
+.english:hover {
+  color: rgb(255, 255, 255) !important;
+}
