@@ -1,0 +1,6 @@
+! 2022-02-19 https://www.youtube.com
+www.youtube.com###clarify-box > .ytd-watch-flexy.style-scope
+
+! 2022-02-20 https://context.reverso.net
+context.reverso.net###blocked-results-banner
+
