@@ -35,7 +35,7 @@ super + u
     sh ~/.config/rofi/rofi-usb-mount.sh
 
 super + x
-    ~/.config/rofi/rofi-power
+    rofi -show power-menu -modi power-menu:rofi-power-menu
 
 super + shift + w
     alacritty -e weather
