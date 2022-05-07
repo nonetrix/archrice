@@ -2,7 +2,7 @@ super + Return
     alacritty
 
 super + w
-    librewolf 
+    brave 
 
 super + d
     rofi -show run
