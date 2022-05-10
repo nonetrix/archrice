@@ -23,7 +23,7 @@ cmd mkfile ${{
   $EDITOR $ans
 }}
 
-cmd drag %dragon-drag-and-drop "$f"
+cmd drag %dragon-drop "$f"
 
 cmd trash ${{
   files=$(printf "$fx" | tr '\n' ';')
